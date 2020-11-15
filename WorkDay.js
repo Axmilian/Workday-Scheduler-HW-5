@@ -21,7 +21,9 @@ $(".description").each(function colorCode() {
         $(this).addClass("future");
     }
 });
+var saveEl = $("#saveBtn")
+$("#saveBtn").innerHTML = localStorage.getItem(".description")
 
-$(".saveBtn").each(function saveLocal() {
-    
+$(saveEl).on("click", function saveBtn() {
+    localStorage.setItem(JSON.stringify(".description", "#saveBtn"))
 })
