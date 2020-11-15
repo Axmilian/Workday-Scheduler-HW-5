@@ -1,11 +1,11 @@
-//Display Current Time-----------------
+//Display Current Time----------------------
 var day = moment().format("dddd MMMM Do, YYYY");
 $("#currentDay").text(day);
 var now = moment().format('LT');
 $("#currentTime").text(now)
-
+//var for my color time function------------
 var colorTime = moment().hour();
-
+//colorTime function changing the color acording to the time------------
 $(".description").each(function colorCode() {
 
     var milTime = $(this).attr("id");
@@ -21,6 +21,7 @@ $(".description").each(function colorCode() {
         $(this).addClass("future");
     }
 });
+//localStorage click function----------------------------------------------
 var saveEl = $("#saveBtn")
 $("#saveBtn").innerHTML = localStorage.getItem(".description")
 
